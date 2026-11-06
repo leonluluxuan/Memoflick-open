@@ -1,0 +1,37 @@
+# Xcode
+#
+# gitignore contributors: remember to keep this file platform-agnostic
+# gitignore test: ./tools/test-gitignore-generation.sh ./Swift.gitignore
+
+## User-specific
+*.xcuserdatad
+*.xcscmblueprint
+*.xccheckout
+*.xcscheme
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.project.xcworkspace
+xcuserdata/
+
+## Build generated
+build/
+DerivedData/
+*.app
+*.ipa
+
+## Various
+*.moved-aside
+*.swp
+*.lock
+*.DS_Store
+*.orig
+*~
+*~.nib
+
+## Swift Package Manager
+#
+# Add this line if you use SwiftPM and don't want to check in your dependencies.
+# .build/
+# Packages/
+# *.resolved
