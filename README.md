@@ -1,5 +1,11 @@
 # Memoflick for iOS
 
+<p align="center">
+  <img src="memoflick/memoflick/Assets.xcassets/BrandLogoLight.imageset/logo-light.png" alt="Memoflick logo" width="180">
+</p>
+
+<p align="center">A local-first way to revisit, review, and organize your memories.</p>
+
 [![License: PolyForm Noncommercial](https://img.shields.io/badge/license-PolyForm%20Noncommercial-blue.svg)](LICENSE)
 [![Platform: iOS](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://developer.apple.com/ios/)
 
