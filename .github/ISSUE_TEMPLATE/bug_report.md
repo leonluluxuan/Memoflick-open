@@ -1,26 +1,26 @@
 ---
-name: Bug report
-about: Report a reproducible problem in the app or widget
+name: Bug report / Bug 报告
+about: Report a reproducible problem in the app or widget / 报告 App 或小组件中的可复现问题
 title: "[Bug] "
 labels: bug
 assignees: ''
 ---
 
-## Summary
+## Summary / 问题摘要
 
 <!-- What went wrong? -->
 
-## Reproduction steps
+## Reproduction steps / 复现步骤
 
 1.
 2.
 3.
 
-## Expected behavior
+## Expected behavior / 预期行为
 
-## Actual behavior
+## Actual behavior / 实际行为
 
-## Environment
+## Environment / 环境
 
 - Device or simulator:
 - iOS version:
@@ -28,7 +28,7 @@ assignees: ''
 - App version or commit:
 - Photo permissions: full / limited / denied
 
-## Additional context
+## Additional context / 其他信息
 
 Please remove personal photos, identifiers, logs containing private data, and
 credentials before attaching screenshots or files. Do not use this template
