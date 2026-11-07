@@ -1,94 +1,104 @@
 # Memoflick for iOS / Memoflick iOS 版
 
 <p align="center">
-  <img src="memoflick/memoflick/Assets.xcassets/BrandLogoLight.imageset/logo-light.png" alt="Memoflick logo" width="180">
+  <img src="memoflick/memoflick/Assets.xcassets/BrandLogoLight.imageset/logo-light.png" alt="Memoflick logo" width="190">
 </p>
 
-<p align="center">A local-first way to revisit, review, and organize your memories.<br>以本地优先的方式，重温、整理和保存你的回忆。</p>
+<p align="center">
+  <strong>A local-first way to revisit, review, and organize your memories.</strong><br>
+  以本地优先的方式，重温、整理和保存你的回忆。
+</p>
 
-[![License: PolyForm Noncommercial](https://img.shields.io/badge/license-PolyForm%20Noncommercial-blue.svg)](LICENSE)
-[![Platform: iOS](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://developer.apple.com/ios/)
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-PolyForm%20Noncommercial-4c6fff.svg" alt="PolyForm Noncommercial License"></a>
+  <a href="https://developer.apple.com/ios/"><img src="https://img.shields.io/badge/platform-iOS-111827.svg" alt="iOS"></a>
+  <a href="USAGE.md"><img src="https://img.shields.io/badge/docs-bilingual-7c3aed.svg" alt="Bilingual documentation"></a>
+</p>
 
-## Introduction / 项目介绍
+## Overview / 项目概览
 
 **English**
 
-Memoflick is an offline-first photo and video review app for iPhone. It
-provides local photo and video review, favorites, trash recovery, metadata,
-and a home-screen photo-wall widget.
+Memoflick is an offline-first photo and video review app for iPhone. It helps
+you turn an overflowing camera roll into a calmer, more intentional memory
+library with quick review, favorites, collections, trash recovery, and a
+home-screen photo-wall widget.
 
 **中文**
 
-Memoflick 是一款面向 iPhone 的离线优先照片与视频整理应用，支持本地照片和视频回顾、收藏、垃圾箱恢复、元数据管理，以及桌面照片墙小组件。
+Memoflick 是一款面向 iPhone 的离线优先照片与视频整理应用。它通过快速回顾、收藏、分类、垃圾箱恢复和桌面照片墙小组件，帮助你把不断增长的相册整理成更清晰、更有意识的回忆库。
 
-The app has no Memoflick account, application server, Supabase, subscription,
-or StoreKit dependency. When the required originals are already available on
-the device, the core workflow can be used without an internet connection.
-Apple Photos may retrieve iCloud-backed originals when the system and the app
-request it; that is handled by Apple Photos and is not an upload to a
-Memoflick server. See [`PRIVACY.md`](PRIVACY.md).
+The core workflow is designed to stay on-device. Memoflick does not require a
+Memoflick account, application server, Supabase, subscription, or StoreKit.
+Apple Photos may retrieve iCloud-backed originals when requested by the system;
+that is handled by Apple Photos and is not an upload to a Memoflick server. See
+[`PRIVACY.md`](PRIVACY.md).
 
-本版本不依赖 Memoflick 账号、应用服务器、Supabase、订阅或 StoreKit。需要的原始素材已经在设备本地时，核心流程可以在没有网络的情况下使用。若照片由 iCloud Photos 管理，Apple Photos 可能按系统和应用请求取回云端原图；这由 Apple Photos 处理，不是上传到 Memoflick 服务器。详见 [`PRIVACY.md`](PRIVACY.md)。
+核心流程以设备本地为中心。Memoflick 不需要 Memoflick 账号、应用服务器、Supabase、订阅或 StoreKit。若素材由 iCloud Photos 管理，Apple Photos 可能按系统请求取回云端原图；这由 Apple Photos 处理，不是上传到 Memoflick 服务器。详见 [`PRIVACY.md`](PRIVACY.md)。
 
-## Features / 功能
+## Core features / 核心功能
 
-| English | 中文 |
-| --- | --- |
-| Local photo and video review | 本地照片与视频回顾 |
-| Favorites, captions, categories, and trash recovery | 收藏、回忆文字、分类与垃圾箱恢复 |
-| Home-screen photo-wall widget | 桌面照片墙小组件 |
-| English and Chinese localization | 中英文界面 |
-| No Memoflick backend or account | 不需要 Memoflick 后端或账号 |
+<p align="center">
+  <img src="docs/screenshots/memoflick-features.png" alt="Memoflick core features overview / Memoflick 核心功能总览" width="100%">
+</p>
 
-## Usage guide / 使用说明
+<p align="center"><sub>Core feature overview / 核心功能总览</sub></p>
 
-See [`USAGE.md`](USAGE.md) for a bilingual step-by-step guide. It includes
-reserved screenshot slots for each operation so maintainers can add real app
-screenshots later without rewriting the instructions.
+| # | English | 中文 |
+| --- | --- | --- |
+| 01 | Swipe to decide: left to delete, right to keep | 滑动决定：左滑删除，右滑保留 |
+| 02 | Scroll and watch memories, including videos | 滚动回顾照片与视频记忆 |
+| 03 | Sort and organize media into collections | 将媒体整理到相册与分类中 |
+| 04 | Track your memory journey with recaps and streaks | 通过回顾和连续记录追踪整理过程 |
+| 05 | Recover items from the trash before permanent deletion | 在永久删除前从垃圾箱恢复项目 |
+| 06 | Visualize saved space and organized results | 直观看到释放的空间与整理结果 |
+| 07 | Surface a daily memory with the home-screen widget | 用桌面小组件每天展示一段回忆 |
 
-请查看 [`USAGE.md`](USAGE.md) 获取中英文分步操作说明。文档已经为每个操作预留截图位置，后续把真实 App 截图放入 `docs/screenshots/` 即可替换。
+> The image above is the product overview for the repository home page. The
+> step-by-step operation screenshots remain intentionally blank in
+> [`USAGE.md`](USAGE.md) so they can be replaced with privacy-safe captures of
+> the final UI.
+>
+> 上图是本仓库首页使用的产品功能总览图。操作教程中的步骤截图仍然有意留空，等最终界面确定后再替换为不含隐私信息的真实截图，详见 [`USAGE.md`](USAGE.md)。
+
+## Why Memoflick / 为什么选择 Memoflick
+
+<table>
+  <tr>
+    <td width="33%"><strong>Local-first<br>本地优先</strong><br><br>Review media and metadata on-device.<br>在设备本地完成回顾和整理。</td>
+    <td width="33%"><strong>Focused workflow<br>专注整理</strong><br><br>Make a quick keep, favorite, or trash decision.<br>快速完成保留、收藏或删除决定。</td>
+    <td width="33%"><strong>Memory-friendly<br>回忆导向</strong><br><br>Turn saved items into collections and daily recaps.<br>把珍藏内容变成分类和每日回顾。</td>
+  </tr>
+</table>
+
+## Get started / 快速开始
+
+The full bilingual walkthrough is in [`USAGE.md`](USAGE.md). In brief:
+
+完整的中英文操作教程请查看 [`USAGE.md`](USAGE.md)。快速步骤如下：
+
+1. Open `memoflick/memoflick.xcodeproj` in Xcode / 使用 Xcode 打开工程。
+2. Choose the `memoflick` scheme and configure your own Team and Bundle ID / 选择 scheme，并配置自己的 Team 和 Bundle ID。
+3. Run on an iPhone or simulator, then grant Photos access / 在 iPhone 或模拟器上运行，并授予照片权限。
+4. Review, keep, favorite, categorize, or move items to trash / 开始回顾、保留、收藏、分类或移入垃圾箱。
 
 ## Build locally / 本地构建
-
-### English
 
 1. Open `memoflick/memoflick.xcodeproj` in Xcode.
 2. Select the `memoflick` scheme and an iPhone simulator or device.
 3. For a fork, set your own Apple Developer Team, bundle identifiers, and App
    Group identifiers. The project uses the public placeholder
    `com.example.memoflick.app`; do not reuse Memoflick's publishing identifiers.
-4. The project deployment target is iOS 16.6, but the current app shows an
-   availability message and requires iOS 17.0 or later for normal use.
+4. The project deployment target is iOS 16.6, but normal use requires iOS 17.0
+   or later because the app shows an availability message below iOS 17.
 
-The project is unsigned in this repository. Signing, provisioning, and App
-Store distribution are the responsibility of each fork owner.
+使用 Xcode 打开 `memoflick/memoflick.xcodeproj`，选择 `memoflick` scheme 和 iPhone 模拟器或真机。创建 fork 时，请配置自己的 Apple Developer Team、Bundle ID 和 App Group ID；项目中的 `com.example.memoflick.app` 只是公开占位符，不要复用 Memoflick 的发布标识。工程部署目标为 iOS 16.6，但正常使用需要 iOS 17.0 或更高版本。
 
-### 中文
+This repository is unsigned and is not an installable IPA. Signing,
+provisioning, and App Store distribution are the responsibility of each fork
+owner.
 
-1. 使用 Xcode 打开 `memoflick/memoflick.xcodeproj`。
-2. 选择 `memoflick` scheme，以及 iPhone 模拟器或真机。
-3. 如果你要创建 fork，请配置自己的 Apple Developer Team、Bundle ID 和
-   App Group ID。本项目使用公开占位符 `com.example.memoflick.app`，不要复用
-   Memoflick 的发布标识。
-4. 工程部署目标为 iOS 16.6，但当前 App 在 iOS 17.0 以下会显示兼容性提示，正常使用建议 iOS 17.0 或更高版本。
-
-本仓库不包含签名。签名、Provisioning Profile 和 App Store 发布由各 fork 维护者负责。
-
-## Install on a physical iPhone / 安装到真机
-
-This repository is not an installable IPA. Build and run it from Xcode with
-your own signing identity.
-
-本仓库不是可直接安装的 IPA，需要使用你自己的签名身份在 Xcode 中构建运行。
-
-1. Install Xcode and open `memoflick/memoflick.xcodeproj` / 安装 Xcode 并打开工程。
-2. Add your Apple Account in **Xcode > Settings > Apple Accounts** / 在 Xcode 设置中添加 Apple Account。
-3. In **Signing & Capabilities**, enable automatic signing and choose your Team / 在签名设置中开启自动签名并选择 Team。
-4. Replace the app and widget bundle identifiers with unique identifiers / 替换 App 和小组件的 Bundle ID。
-5. If keeping the widget, create your own App Group and replace
-   `group.com.example.memoflick.app` in both entitlements files and both
-   `WidgetPhotoStore.swift` files / 如果保留小组件，请创建自己的 App Group，并同步替换两个 entitlements 文件和两个 `WidgetPhotoStore.swift` 中的标识。
-6. Select the iPhone and click **Run** / 选择 iPhone 后点击运行。
+本仓库不包含签名，也不是可直接安装的 IPA。签名、Provisioning Profile 和 App Store 发布由各 fork 维护者负责。
 
 ## Privacy / 隐私
 
